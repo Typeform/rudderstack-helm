@@ -119,7 +119,7 @@ spec:
         lifecycle:
           preStop:
             exec:
-              command: [ "/pre-stop.sh" ]
+              command: [ "{{ .Values.backend.config.mountPath }}/pre-stop.sh" ]
         {{- end }}
       {{- if .Values.telegraf_sidecar.enabled }}
       - name: {{ include "telegraf-sidecar.name" .}}
