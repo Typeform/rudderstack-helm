@@ -1,0 +1,28 @@
+name: CI Standard Checks
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types:
+      - opened
+      - edited
+      - synchronize
+      - reopened
+      - ready_for_review
+    branches:
+      - main
+jobs:
+  ci-standard-checks:
+    runs-on:
+      - self-hosted
+      - automated-checks-ephemeral
+    steps:
+      - name: Check Out Source Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: CI Standard Checks
+        uses: Typeform/ci-standard-checks@v1
+        with:
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
