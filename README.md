@@ -1,3 +1,4 @@
+<a href=https://engineering-metrics.typeform.tf/standards-adoption-tool/reports/rudderstack-helm/><img src=https://api.typeform.com/repositories/rudderstack-helm/badges.svg /></a>
 # What is RudderStack?
 
 [RudderStack](https://rudderstack.com/) is a **customer data pipeline** tool for collecting, routing and processing data
